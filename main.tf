@@ -9,13 +9,11 @@ terraform {
 
 provider "proxmox" {
   # url is the hostname (FQDN if you have one) for the proxmox host you'd like to connect to to issue the commands. my proxmox host is 'prox-1u'. Add /api2/json at the end for the API
-#  pm_api_url = "https://pve.salvas.home:8006/api2/json"
-   pm_api_url = var.pmox_api_url
 
-#  pm_user = "root@pam"
+   pm_api_url = var.pmox_api_url
    pm_user = var.pmox_user
-#  pm_password = "root@root"
    pm_password = var.pmox_password
+   
   # leave tls_insecure set to true unless you have your proxmox SSL certificate situation fully sorted out (if you do, you will know)
   pm_tls_insecure = true
 
