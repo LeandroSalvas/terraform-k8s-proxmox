@@ -25,13 +25,10 @@ provider "proxmox" {
 ###############################################
 resource "proxmox_vm_qemu" "k8s_masters" {
  
-  for_each = {
-  m1 = { target_node = "pve", vcpu = "2", memory = "4096", disk_size = "15G", name = "k8sm1", ip = "192.168.15.221", gw = "192.168.15.1" },
-
-  }
   
+  for_each = var.k8s_masters #using variables in terraform.tfvars
   name = each.value.name 
-  desc = each.value.name
+  desc = each.value.notes
   target_node = each.value.target_node
   os_type = "cloud-init"
   full_clone = true
@@ -112,15 +109,9 @@ provisioner "remote-exec" {
 
 resource "proxmox_vm_qemu" "k8s_workers" {
  
-  for_each = {
-  w1 = { target_node = "pve", vcpu = "2", memory = "2048", disk_size = "15G", name = "k8sw1", ip = "192.168.15.222", gw = "192.168.15.1" },
-  w2 = { target_node = "pve", vcpu = "2", memory = "2048", disk_size = "15G", name = "k8sw2", ip = "192.168.15.223", gw = "192.168.15.1" }
-  
-
-  }
-  
+  for_each = var.k8s_workers #using variables in terraform.tfvars
   name = each.value.name 
-  desc = each.value.name
+  desc = each.value.notes
   target_node = each.value.target_node
   os_type = "cloud-init"
   full_clone = true

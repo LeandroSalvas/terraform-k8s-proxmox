@@ -16,3 +16,13 @@ variable "pmox_password" {
 variable "pmox_api_url" {
     default = "https://pve.salvas.home:8006/api2/json"
 }
+
+variable "k8s_masters" {
+  description = "vm variables in a dictionary "
+  type        = map(any)
+}
+
+variable "k8s_workers" {
+  description = "vm variables in a dictionary "
+  type        = map(any)
+}
