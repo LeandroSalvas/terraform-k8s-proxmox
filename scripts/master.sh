@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Setup for Control Plane (Master) servers
+# Setup for Control Plane (Master) server
 
 set -euxo pipefail
 
@@ -18,10 +18,7 @@ mkdir -p "$HOME"/.kube
 sudo cp -i /etc/kubernetes/admin.conf "$HOME"/.kube/config
 sudo chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
 
-# Save Configs to shared /Vagrant location
-
-# For Vagrant re-runs, check if there is existing configs in the location and delete it for saving new configuration.
-
+# Save Configs on directory to share to another hosts access files to join cluster
 config_path="/terraform/configs"
 
 if [ -d $config_path ]; then

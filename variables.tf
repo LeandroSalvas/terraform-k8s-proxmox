@@ -3,15 +3,15 @@ variable "ssh_key" {
 }
 
 variable "template_name" {
-    default = "ubuntu-template"
+    default = "ubuntu2204-template"
 }
 
 variable "pmox_user" {
-    default = "root@pam"
+    default = "terraform-prov@pve"
 }
 
 variable "pmox_password" {
-    default = "root@root"
+    default = "password"
 }
 variable "pmox_api_url" {
     default = "https://pve.salvas.home:8006/api2/json"
