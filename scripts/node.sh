@@ -21,3 +21,5 @@ sudo chown 1000:1000 /home/ubuntu/.kube/config
 NODENAME=$(hostname -s)
 kubectl label node $(hostname -s) node-role.kubernetes.io/worker=worker
 EOF
+
+echo "WORKER node CONFIG FINISHED"
