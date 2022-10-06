@@ -23,6 +23,6 @@ variable "k8s_masters" {
 }
 
 variable "k8s_workers" {
-  description = "vm variables in a dictionary "
+  description = "vm variables in  dictionary"
   type        = map(any)
 }

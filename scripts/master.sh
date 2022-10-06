@@ -18,7 +18,7 @@ mkdir -p "$HOME"/.kube
 sudo cp -i /etc/kubernetes/admin.conf "$HOME"/.kube/config
 sudo chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
 
-# Save Configs on directory to share to another hosts access files to join cluster
+# Save Configs on directory to share to another hosts access files to join cluster!
 config_path="/terraform/configs"
 
 if [ -d $config_path ]; then
