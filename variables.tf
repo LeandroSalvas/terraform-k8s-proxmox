@@ -3,7 +3,7 @@ variable "ssh_key" {
 }
 
 variable "template_name" {
-    default = "ubuntu2004-template"
+    default = "ubuntu-2210-cloudinit-template"
 }
 
 variable "pmox_user" {
