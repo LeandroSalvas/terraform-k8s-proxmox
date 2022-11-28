@@ -3,7 +3,7 @@ variable "ssh_key" {
 }
 
 variable "template_name" {
-    default = "ubuntu2204-template"
+    default = "ubuntu2004-template"
 }
 
 variable "pmox_user" {

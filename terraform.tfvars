@@ -5,4 +5,5 @@ k8s_masters = {
 k8s_workers = {
  w1 = { target_node = "pve", vcpu = "2", memory = "2048", disk_size = "15G", name = "k8sw1",notes = "Kubernetes Worker", ip = "192.168.15.222", gw = "192.168.15.1" },
  w2 = { target_node = "pve", vcpu = "2", memory = "2048", disk_size = "15G", name = "k8sw2",notes = "Kubernetes Worker", ip = "192.168.15.223", gw = "192.168.15.1" }
+ w3 = { target_node = "pve", vcpu = "2", memory = "2048", disk_size = "15G", name = "k8sw3",notes = "Kubernetes Worker", ip = "192.168.15.224", gw = "192.168.15.1" }
 }
